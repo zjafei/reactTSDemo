@@ -64,5 +64,13 @@
     "hooks": {
       "pre-commit": "npm run lint-staged"
     }
+  },
+  "types": "./typings/*.d.ts",
+  "typesVersions": {
+    ">=3.1": {
+      "*": [
+        "ts3.1/*"
+      ]
+    }
   }
 }
