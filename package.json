@@ -45,10 +45,11 @@
     "puppeteer": "^1.10.0"
   },
   "lint-staged": {
-    "**/*.{js,jsx,less}": [
+    "**/*.{js,jsx,ts,tsx,json,less}": [
       "prettier --write",
       "git add"
     ],
+    "**/*.{ts,tsx}": "yarn lint:ts",
     "**/*.{js,jsx}": "npm run lint-staged:js",
     "**/*.less": "stylelint --syntax less"
   },
