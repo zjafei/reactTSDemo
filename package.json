@@ -5,6 +5,7 @@
     "test": "cross-env ENV=test umi build",
     "build": "cross-env ENV=pro umi build",
     "lint-staged": "lint-staged",
+    "lint:ts": "tslint --fix -p tsconfig.json",
     "lint-staged:js": "eslint --fix --ext .js"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.120",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "babel-eslint": "^10.0.1",
@@ -49,7 +51,7 @@
       "prettier --write",
       "git add"
     ],
-    "**/*.{ts,tsx}": "yarn lint:ts",
+    "**/*.{ts,tsx}": "npm run lint:ts",
     "**/*.{js,jsx}": "npm run lint-staged:js",
     "**/*.less": "stylelint --syntax less"
   },
